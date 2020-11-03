@@ -3,8 +3,7 @@ import 'package:scope_inspector/screendisplay.dart';
 
 class Stoplights extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text('STOPLIGHTS: READY, SET, GO!!!'),
       ),
@@ -16,6 +15,6 @@ class Stoplights extends StatelessWidget {
           SelectAsset('assets/stoplight/3.png', 'GOOOO!'),
         ],
       ),
-    ));
+    );
   }
 }

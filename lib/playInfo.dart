@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class PlayInfo extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
             title: Center(
           child: Text('How to play'),
@@ -79,7 +78,6 @@ class PlayInfo extends StatelessWidget {
                 ]),
           ),
         ),
-      ),
-    );
+      );
   }
 }

@@ -3,8 +3,7 @@ import 'package:scope_inspector/screendisplay.dart';
 
 class Cards extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text('CARDS: PLACE YOUR BETS!'),
         ),
@@ -22,7 +21,6 @@ class Cards extends StatelessWidget {
             SelectAsset('assets/cards/34.png', 'Thirty-Four'),
           ],
         ),
-      ),
-    );
+      );
   }
 }

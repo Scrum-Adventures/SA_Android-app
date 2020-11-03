@@ -3,8 +3,7 @@ import 'package:scope_inspector/screendisplay.dart';
 
 class Tshirts extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text('T-SHIRTS: FIND THE RIGHT FIT!'),
         ),
@@ -18,7 +17,6 @@ class Tshirts extends StatelessWidget {
             SelectAsset('assets/tshirts/XL.png', 'Extra Large'),
           ],
         ),
-      ),
-    );
+      );
   }
 }
