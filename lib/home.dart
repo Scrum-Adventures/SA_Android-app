@@ -14,11 +14,12 @@ class Home extends StatelessWidget {
           ImageWidget('assets/home/tshirt.png', '/tshirts.dart'),
           ImageWidget('assets/home/card.png', '/cards.dart'),
           ImageWidget('assets/home/stoplight.png', '/stoplight.dart'),
+          ImageWidget('assets/home/ccLogo.png', '/capacityCalc.dart')
         ]),
         floatingActionButton: FloatingActionButton.extended(
           elevation: 10.0,
           icon: Icon(Icons.info_outline),
-          label: Text("About ScrumAdventures.com"),
+          label: Text("About Us"),
           onPressed: () => launch('https://scrumadventures.com/'),
         ));
   }

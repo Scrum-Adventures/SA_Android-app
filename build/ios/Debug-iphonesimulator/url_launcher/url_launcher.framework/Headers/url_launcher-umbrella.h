@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import "UrlLauncherPlugin.h"
+#import "FLTURLLauncherPlugin.h"
 
 FOUNDATION_EXPORT double url_launcherVersionNumber;
 FOUNDATION_EXPORT const unsigned char url_launcherVersionString[];

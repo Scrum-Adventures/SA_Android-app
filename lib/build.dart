@@ -14,3 +14,20 @@ class ImageWidget extends StatelessWidget {
     );
   }
 }
+
+class TextWidget extends StatelessWidget {
+  final String _text;
+
+  TextWidget(this._text);
+
+  Widget build(BuildContext context) {
+    return FlatButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(0.0),
+          side: BorderSide(color: Colors.blue)
+        ),
+        onPressed: null,
+        child: Text(_text, style: TextStyle(fontSize: 18.0),),
+    );
+  }
+}

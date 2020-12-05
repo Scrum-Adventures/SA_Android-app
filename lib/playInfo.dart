@@ -75,7 +75,23 @@ class PlayInfo extends StatelessWidget {
                         fontWeight: FontWeight.normal,
                         decoration: TextDecoration.none),
                   ),
-                ]),
+                  TextSpan(
+                    text: '\n\nCapacity Calculator',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                  TextSpan(
+                    text:
+                    '\nSelect one team member to collect and enter each team  member’s  name  and  their  available  hours  to work  on  the  Sprint.  Once  all  of  the  team  member entries  are  completed,  the  total  team  hours  will  be calculated and made available as the team capacity.',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                        decoration: TextDecoration.none),
+                  ),
+                ],
+            ),
           ),
         ),
       );

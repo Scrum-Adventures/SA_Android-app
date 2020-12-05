@@ -4,17 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/FLTURLLauncherPlugin.h</key>
+		<data>
+		/Om48hk71JcX0NsUQBeOa9p5GXQ=
+		</data>
 		<key>Headers/UrlLauncherPlugin.h</key>
 		<data>
 		iAhAD1etGCZIaN13X9VOS4K/gg0=
 		</data>
 		<key>Headers/url_launcher-umbrella.h</key>
 		<data>
-		y9t5/2SlNJJ8z9USKojfxT7eAL8=
+		Er13QC2JHztrggRShCt2/K1wqNw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HkB7L0yUf15g8oAGzX7ChJvCuGM=
+		9kxjzL6T5ULuovJKEphZbcqSLgU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -23,6 +27,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/FLTURLLauncherPlugin.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/Om48hk71JcX0NsUQBeOa9p5GXQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			woKI4nkdAmbkxjmMJOttKsPSsOnaTGIHbWcJWxDqMZU=
+			</data>
+		</dict>
 		<key>Headers/UrlLauncherPlugin.h</key>
 		<dict>
 			<key>hash</key>
@@ -38,11 +53,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y9t5/2SlNJJ8z9USKojfxT7eAL8=
+			Er13QC2JHztrggRShCt2/K1wqNw=
 			</data>
 			<key>hash2</key>
 			<data>
-			H4PPz1o2os5Gfb/QG3DnvpmSf7uBlFnd4hIjN0ccCzw=
+			HsLbjY7ljMQgU7ajxZiK7uJu0ET8Vhjyu4NmtOpon2o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
