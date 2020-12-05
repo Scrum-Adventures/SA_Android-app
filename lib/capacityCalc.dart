@@ -8,8 +8,13 @@ class Capacity extends StatefulWidget {
 }
 
 class _capacityState extends State<Capacity> {
+  List<dynamicWidget> dynamicList = [];
+  List<String> Price = [];
+  List<String> Product = [];
+
   Icon floatingIcon;
   double total;
+  
   static const String _title = 'Capacity Calculator';
 
   @override
@@ -19,6 +24,60 @@ class _capacityState extends State<Capacity> {
       child: new ListView.builder(
         itemCount: dynamicList.length,
         itemBuilder: (_, index) => dynamicList[index],
+      ),
+    );
+
+    addDynamic() {
+      if (Product.length != 0) {
+        floatingIcon = new Icon(Icons.add);
+
+        Product = [];
+        Price = [];
+        dynamicList = [];
+      }
+      setState(() {});
+      if (dynamicList.length >= 25) {
+        return;
+      }
+      dynamicList.add(new dynamicWidget());
+    }
+
+    submitData() {
+      floatingIcon = new Icon(Icons.arrow_back);
+      Product = [];
+      Price = [];
+      total = 0;
+      dynamicList.forEach((widget) => Product.add(widget.product.text));
+      dynamicList.forEach((widget) => Price.add(widget.price.text));
+      Price.forEach((index) {
+        total += double.parse(index);
+      });
+      Product.add("TEAM CAPACITY ");
+      Product.length == 1
+          ? Price.add("0")
+          : Price.add((total).toStringAsFixed(2));
+
+      print(total.toString());
+      setState(() {});
+      print(Product.length);
+    }
+
+    Widget submitButton = new Container(
+      margin: const EdgeInsets.only(bottom: 20.0),
+      child: new RaisedButton(
+        color: Color.fromRGBO(47, 86, 163, 1),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18.0),
+          // side: BorderSide(color: Color.fromRGBO(47, 86, 163, 1))
+        ),
+        onPressed: submitData,
+        child: new Padding(
+          padding: new EdgeInsets.all(16.0),
+          child: new Text(
+            'Calculate Capacity',
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+        ),
       ),
     );
 
@@ -65,77 +124,21 @@ class _capacityState extends State<Capacity> {
       );
     }
 
-    submitData() {
-      floatingIcon = new Icon(Icons.arrow_back);
-      Product = [];
-      Price = [];
-      total = 0;
-      dynamicList.forEach((widget) => Product.add(widget.product.text));
-      dynamicList.forEach((widget) => Price.add(widget.price.text));
-      Price.forEach((index) {
-        total += double.parse(index);
-      });
-      Product.add("TEAM CAPACITY ");
-      Product.length == 1
-          ? Price.add("0")
-          : Price.add((total).toStringAsFixed(2));
-
-      print(total.toString());
-      setState(() {});
-      print(Product.length);
-    }
-
-    Widget submitButton = new Container(
-      margin: const EdgeInsets.only(bottom: 20.0),
-      child: new RaisedButton(
-        color: Color.fromRGBO(47, 86, 163, 1),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18.0),
-          // side: BorderSide(color: Color.fromRGBO(47, 86, 163, 1))
-        ),
-        onPressed: submitData,
-        child: new Padding(
-          padding: new EdgeInsets.all(16.0),
-          child: new Text(
-            'Calculate Capacity',
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
-        ),
-      ),
-    );
-
     return new Scaffold(
       appBar: AppBar(
-        title: Text("Capacity Calculator"),
+        title: Text(_title),
       ),
         body: new Container(
             child: new Column(children: <Widget>[
               Product.length == 0 ? dynamicTextField : result(context),
               Product.length == 0 ? submitButton : new Container(),
-            ])),
+            ],
+            ),
+        ),
         floatingActionButton: FloatingActionButton(
             onPressed: addDynamic, child: new Icon(Icons.add),
         ),
     );
-  }
-
-  List<dynamicWidget> dynamicList = [];
-  List<String> Price = [];
-  List<String> Product = [];
-
-  addDynamic() {
-    if (Product.length != 0) {
-      floatingIcon = new Icon(Icons.add);
-
-      Product = [];
-      Price = [];
-      dynamicList = [];
-    }
-    setState(() {});
-    if (dynamicList.length >= 25) {
-      return;
-    }
-    dynamicList.add(new dynamicWidget());
   }
 }
 
