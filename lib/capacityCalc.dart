@@ -154,7 +154,7 @@ class dynamicWidget extends StatelessWidget {
           Row(
             children: <Widget>[
               Container(
-                width: 200,
+                width: MediaQuery.of(context).size.width/2,
                 padding: EdgeInsets.fromLTRB(5, 5, 5, 0),
                 child: new TextFormField(
                   controller: product,
@@ -164,7 +164,7 @@ class dynamicWidget extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 150,
+                width: MediaQuery.of(context).size.width/2,
                 padding: EdgeInsets.fromLTRB(5, 5, 5, 0),
                 child: new TextFormField(
                   controller: price,
