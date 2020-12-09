@@ -164,7 +164,7 @@ class dynamicWidget extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 200,
+                width: 150,
                 padding: EdgeInsets.fromLTRB(5, 5, 5, 0),
                 child: new TextFormField(
                   controller: price,

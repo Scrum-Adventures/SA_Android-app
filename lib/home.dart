@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('SCRUM ADVENTURES: TOOLBOX'),
+          title: Text('SCRUM ADVENTURES TOOLBOX'),
         ),
         body: new GridView.count(crossAxisCount: 2, children: <Widget>[
           ImageWidget('assets/home/HTP.png', '/playInfo.dart'),
