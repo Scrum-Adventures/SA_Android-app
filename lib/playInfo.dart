@@ -20,7 +20,7 @@ class PlayInfo extends StatelessWidget {
               children: <TextSpan>[
                 TextSpan(
                   text:
-                  'For estimating a product backlog item relative size, choose either the t-shirt or Fibonacci card option. For voting situations, select the stoplight option to communicate your view.',
+                  'For estimating a product backlog item relative size, choose either the t-shirt or Fibonacci card option. For voting situations, select the stoplight option to communicate your view. To determine the team capacity for a Sprint, use the Capacity Calculator.',
                   style: TextStyle(
                     color: Color.fromRGBO(47, 86, 163, 1),
                     fontSize: 20,
