@@ -8,9 +8,9 @@ class Capacity extends StatefulWidget {
 }
 
 class _capacityState extends State<Capacity> {
-  Icon floatingIcon;
-  double total;
-  double allocatedHrs;
+  late Icon floatingIcon;
+  late double total;
+  late double allocatedHrs;
   static const String _title = 'Capacity Calculator';
 
   @override
@@ -185,7 +185,7 @@ class dynamicWidget extends StatelessWidget {
                     keyboardType:
                         TextInputType.numberWithOptions(decimal: true),
                     onSaved: ((value) => {
-                          double.parse(value) <= 100 ? double.parse(value) : 100
+                          double.parse(value!) <= 100 ? double.parse(value!) : 100
                         }),
                   )),
             ],
