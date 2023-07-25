@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:wc_form_validators/wc_form_validators.dart';
+// import 'package:wc_form_validators/wc_form_validators.dart';
 
 class Capacity extends StatefulWidget {
   @override
@@ -95,10 +95,14 @@ class _capacityState extends State<Capacity> {
 
     Widget submitButton = new Container(
       margin: const EdgeInsets.only(bottom: 20.0),
-      child: new RaisedButton(
-        color: Color.fromRGBO(47, 86, 163, 1),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18.0),
+      child: new ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          textStyle: TextStyle(
+            color: Color.fromRGBO(47, 86, 163, 1)
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0)
+          )
         ),
         onPressed: submitData,
         child: new Padding(
@@ -121,7 +125,7 @@ class _capacityState extends State<Capacity> {
             onPressed: addDynamic, child: new Icon(Icons.add)));
   }
 
-  List<dynamicWidget> dynamicList = [];
+  List<DynamicWidget> dynamicList = [];
   List<double> hours = [];
   List<String> name = [];
   List<double> allocation = [];
@@ -138,14 +142,14 @@ class _capacityState extends State<Capacity> {
     if (dynamicList.length >= 25) {
       return;
     }
-    dynamicList.add(new dynamicWidget());
+    dynamicList.add(new DynamicWidget());
   }
 }
 
-class dynamicWidget extends StatelessWidget {
-  TextEditingController nameController = new TextEditingController();
-  TextEditingController hoursController = new TextEditingController();
-  TextEditingController allocation = new TextEditingController();
+class DynamicWidget extends StatelessWidget {
+  final TextEditingController nameController = new TextEditingController();
+  final TextEditingController hoursController = new TextEditingController();
+  final TextEditingController allocation = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -185,7 +189,7 @@ class dynamicWidget extends StatelessWidget {
                     keyboardType:
                         TextInputType.numberWithOptions(decimal: true),
                     onSaved: ((value) => {
-                          double.parse(value!) <= 100 ? double.parse(value!) : 100
+                          double.parse(value!) <= 100 ? double.parse(value) : 100
                         }),
                   )),
             ],

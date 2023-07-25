@@ -8,7 +8,7 @@ class SelectAsset extends StatelessWidget {
   SelectAsset(this._asset, this._title);
 
   Widget build(BuildContext context) {
-    return FlatButton(
+    return TextButton(
       onPressed: () {
         _navigateAndDisplaySelection(context);
       },
@@ -21,7 +21,7 @@ class SelectAsset extends StatelessWidget {
       context,
       MaterialPageRoute(builder: (context) => SelectScreen(_asset, _title)),
     );
-    Scaffold.of(context)
+    ScaffoldMessenger.of(context)
       ..removeCurrentSnackBar()
       ..showSnackBar(SnackBar(content: result));
     // content: Text("$result")
@@ -41,7 +41,7 @@ class SelectScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            FlatButton(
+            TextButton(
                 onPressed: () {
                   Navigator.pop(context, _asset);
                 },

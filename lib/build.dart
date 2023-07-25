@@ -8,7 +8,7 @@ class ImageWidget extends StatelessWidget {
   ImageWidget(this._asset, this._route);
 
   Widget build(BuildContext context) {
-    return FlatButton(
+    return TextButton(
       onPressed: () => Navigator.pushNamed(context, _route),
       child: Image.asset(_asset, fit: BoxFit.contain),
     );
@@ -21,10 +21,12 @@ class TextWidget extends StatelessWidget {
   TextWidget(this._text);
 
   Widget build(BuildContext context) {
-    return FlatButton(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0.0),
-          side: BorderSide(color: Colors.blue)
+    return TextButton(
+        style: TextButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(0.0),
+            side: BorderSide(color: Colors.blue)
+          )
         ),
         onPressed: null,
         child: Text(_text, style: TextStyle(fontSize: 18.0),),
