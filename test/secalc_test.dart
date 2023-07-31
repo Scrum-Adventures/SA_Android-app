@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:scope_inspector/build.dart';
-import 'package:scope_inspector/home.dart';
 
 void main() {
   testWidgets('ImageWidget Navigation Test', (WidgetTester tester) async {
