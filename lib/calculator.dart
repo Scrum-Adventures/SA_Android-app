@@ -42,7 +42,8 @@ class _CalculatorState extends State<Calculator> {
                           minValue: 1,
                           maxValue: 31,
                           value: _initialValue,
-                          onChanged: (value) => setState(() => _initialValue = value)
+                          onChanged: (value) => setState(() => _initialValue = value),
+                          infiniteLoop: true,
                       ),
                     ),
                   ],

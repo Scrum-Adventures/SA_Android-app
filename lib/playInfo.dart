@@ -88,6 +88,21 @@ class PlayInfo extends StatelessWidget {
                       fontWeight: FontWeight.normal,
                       decoration: TextDecoration.none),
                 ),
+                TextSpan(
+                  text: '\n\nScrum Events Calculator',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                TextSpan(
+                  text:
+                  '\nEnter the number of days in your next sprint and the app will calculate the appropriate timebox for each one of the 5 scrum events. ',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal,
+                      decoration: TextDecoration.none),
+                ),
               ]),
         ),
       ),

@@ -6,37 +6,18 @@ import 'tshirts.dart';
 import 'cards.dart';
 import 'stoplight.dart';
 import 'capacity.dart';
-import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
-// import 'package:custom_splash/custom_splash.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:page_transition/page_transition.dart';
 
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: FlutterSplashScreen.fadeIn(
-        backgroundColor: Colors.white,
-        onInit: () {
-          debugPrint("On Init");
-        },
-        onEnd: () {
-          debugPrint("On End");
-        },
-        childWidget: SizedBox(
-          height: 200,
-          width: 200,
-          child: Image.asset("assets/logo/salogont.png"),
-        ),
-        onAnimationEnd: () => debugPrint("On Fade In End"),
-        defaultNextScreen: Home(),
+      home: AnimatedSplashScreen(
+          splash: "assets/logo/salogont.png",
+          nextScreen: Home(),
+          splashTransition: SplashTransition.rotationTransition,
+          pageTransitionType: PageTransitionType.leftToRight,
       ),
-      // home: CustomSplash(
-      //   imagePath: 'assets/logo/salogont.png',
-      //   backGroundColor: Colors.white,
-      //   animationEffect: 'fade-in',
-      //   logoSize: 200,
-      //   home: Home(),
-      //   duration: 2600,
-      //   type: CustomSplashType.StaticDuration,
-      // ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
@@ -50,6 +31,6 @@ class MyApp extends StatelessWidget {
     );
     // Gustavo is in
     // Eva is in
-    //Tymee is in
+    // Tymee is in
   }
 }
