@@ -16,39 +16,41 @@ class _CalculatorState extends State<Calculator> {
         appBar: AppBar(
           title: Text('Scrum Events Calculator'),
         ),
-        body: Container(
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.fromLTRB(8.0, 42.0, 8.0, 8.0),
-                      child: Text(
-                        '# of Days in the new Sprint: ',
-                        style: TextStyle(fontSize: 22),
-                      ),
+        body: Column(
+          children: [
+            Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                      child: Image.asset(
+                    'assets/timebox/sprintDays.png',
+                    width: 250,
+                    height: 250,
+                  )),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(8.0, 12.0, 8.0, 12.0),
+                    child: NumberPicker(
+                      itemHeight: 25,
+                      minValue: 1,
+                      maxValue: 31,
+                      value: _initialValue,
+                      onChanged: (value) =>
+                          setState(() => _initialValue = value),
+                      infiniteLoop: true,
                     ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.fromLTRB(8.0, 12.0, 8.0, 12.0),
-                      child: NumberPicker(
-                          itemHeight: 25,
-                          minValue: 1,
-                          maxValue: 31,
-                          value: _initialValue,
-                          onChanged: (value) => setState(() => _initialValue = value),
-                          infiniteLoop: true,
-                      ),
-                    ),
-                  ],
-                )
-              ]),
+                  ),
+                ],
+              )
+            ]),
+          ],
         ));
   }
 }

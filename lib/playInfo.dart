@@ -89,7 +89,7 @@ class PlayInfo extends StatelessWidget {
                       decoration: TextDecoration.none),
                 ),
                 TextSpan(
-                  text: '\n\nScrum Events Calculator',
+                  text: '\n\nScrum Events Timebox',
                   style: TextStyle(
                     color: Colors.black,
                   ),
