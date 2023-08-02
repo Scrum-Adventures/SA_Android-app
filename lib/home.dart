@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
           ImageWidget('assets/home/card.png', '/cards.dart'),
           ImageWidget('assets/home/stoplight.png', '/stoplight.dart'),
           ImageWidget('assets/home/ccLogo.png', '/capacity.dart'),
-          ImageWidget('assets/home/calculator.png','/calculator.dart')
+          ImageWidget('assets/home/timebox.png','/calculator.dart')
         ]),
         floatingActionButton: FloatingActionButton.extended(
           elevation: 10.0,
