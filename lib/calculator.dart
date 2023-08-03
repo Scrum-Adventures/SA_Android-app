@@ -1,6 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:numberpicker/numberpicker.dart';
+
+const List<String> list = <String>[
+  '< 1 Week',
+  '1 Week',
+  '2 Weeks',
+  '3 Weeks',
+  '1 Month'
+];
 
 class Calculator extends StatefulWidget {
   @override
@@ -8,49 +15,58 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  int _initialValue = 1;
+  String dropdownValue = list.first;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Scrum Events Calculator'),
-        ),
-        body: Column(
-          children: [
-            Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                      child: Image.asset(
-                    'assets/timebox/sprintDays.png',
-                    width: 250,
-                    height: 250,
-                  )),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    padding: EdgeInsets.fromLTRB(8.0, 12.0, 8.0, 12.0),
-                    child: NumberPicker(
-                      itemHeight: 25,
-                      minValue: 1,
-                      maxValue: 31,
-                      value: _initialValue,
-                      onChanged: (value) =>
-                          setState(() => _initialValue = value),
-                      infiniteLoop: true,
-                    ),
-                  ),
-                ],
-              )
-            ]),
-          ],
-        ));
+      appBar: AppBar(
+        title: Text('Scrum Events Calculator'),
+      ),
+      body: GridView.count(
+        crossAxisCount: 2,
+        children: <Widget>[
+          Image.asset('assets/timebox/sprintdays.png', width: 50, height: 50),
+          Container(
+            padding: EdgeInsets.fromLTRB(45, 70, 12, 12),
+            child: DropdownButton<String>(
+              value: dropdownValue,
+              onChanged: (String? value) {
+                setState(() {
+                  dropdownValue = value!;
+                });
+              },
+              items: list.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                    value: value, child: Text(value));
+              }).toList(),
+            ),
+          ),
+          Image.asset(
+            'assets/timebox/sprintplanning.png',
+            width: 150,
+            height: 90,
+          ),
+          Text('Sprint planning time'),
+          Image.asset(
+            'assets/timebox/dailyscrum.png',
+            width: 150,
+            height: 90,
+          ),
+          Text('15 minutes'),
+          Image.asset(
+            'assets/timebox/sprintreview.png',
+            width: 150,
+            height: 90,
+          ),
+          Text('Sprint review time'),
+          Image.asset(
+            'assets/timebox/sprintretro.png',
+            width: 150,
+            height: 90,
+          )
+        ],
+      ),
+    );
   }
 }
