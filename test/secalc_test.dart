@@ -15,10 +15,10 @@ void main() {
       // Mock the navigator to capture the pushed route
       navigatorObservers: [MockNavigatorObserver(mockNavigator)],
       home: Scaffold(
-        body: ImageWidget('assets/home/calculator.png', '/calculator.dart'),
+        body: ImageWidget('assets/home/calculator.png', '/timebox.dart'),
       ),
       routes: {
-        '/calculator.dart': (context) => Scaffold(
+        '/timebox.dart': (context) => Scaffold(
           appBar: AppBar(title: Text('Image Detail')),
           body: Text('Image detail page content'),
         ),
@@ -36,7 +36,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // Verify that the correct route was pushed
-    expect(pushedRoute, '/calculator.dart');
+    expect(pushedRoute, '/timebox.dart');
   });
 }
 

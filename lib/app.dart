@@ -1,4 +1,4 @@
-import 'package:scope_inspector/calculator.dart';
+import 'package:scope_inspector/timebox.dart';
 import 'package:scope_inspector/playInfo.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         '/cards.dart': (ctx) => Cards(),
         '/stoplight.dart': (ctx) => Stoplights(),
         '/capacity.dart': (ctx) => Capacity(),
-        '/calculator.dart': (ctx) => Calculator(),
+        '/timebox.dart': (ctx) => Timebox(),
       },
     );
     // Gustavo is in
