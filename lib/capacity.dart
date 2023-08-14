@@ -116,6 +116,9 @@ class _capacityState extends State<Capacity> {
     );
 
     return new Scaffold(
+        appBar: AppBar(
+          title: Text('CAPACITY CALCULATOR'),
+        ),
         body: new Container(
             child: new Column(children: <Widget>[
           name.length == 0 ? dynamicTextField : result(context),

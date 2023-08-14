@@ -46,12 +46,12 @@ class _TimeboxState extends State<Timebox> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Scrum Events Timebox'),
+        title: Text('SCRUM EVENTS TIMEBOX'),
       ),
       body: GridView.count(
         key: Key('timeboxGrid'),
         physics: NeverScrollableScrollPhysics(),
-        childAspectRatio: 1.30,
+        childAspectRatio: 1.35,
         crossAxisCount: 2,
         children: <Widget>[
           Image.asset(
