@@ -50,7 +50,6 @@ class _TimeboxState extends State<Timebox> {
       ),
       body: GridView.count(
         key: Key('timeboxGrid'),
-        physics: NeverScrollableScrollPhysics(),
         childAspectRatio: 1.35,
         crossAxisCount: 2,
         children: <Widget>[
