@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class SelectAsset extends StatelessWidget {
   final String _asset;
   final String _title;
+  final String _revealImageKey;
 
-  SelectAsset(this._asset, this._title);
+  SelectAsset(this._asset, this._title, this._revealImageKey);
 
   Widget build(BuildContext context) {
     return TextButton(
@@ -17,37 +17,54 @@ class SelectAsset extends StatelessWidget {
   }
 
   _navigateAndDisplaySelection(BuildContext context) async {
-    final result = await Navigator.push(
+    await Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => SelectScreen(_asset, _title)),
+      MaterialPageRoute(
+          builder: (context) => SelectScreen(_asset, _title, _revealImageKey)),
     );
-    ScaffoldMessenger.of(context)
-      ..removeCurrentSnackBar()
-      ..showSnackBar(SnackBar(content: result));
-    // content: Text("$result")
   }
 }
 
-class SelectScreen extends StatelessWidget {
+class SelectScreen extends StatefulWidget {
   final String _asset;
   final String _title;
-  SelectScreen(this._asset, this._title);
+  final String _revealImageKey;
+
+  SelectScreen(this._asset, this._title, this._revealImageKey);
+
+  @override
+  State<SelectScreen> createState() => _SelectScreenState();
+}
+
+class _SelectScreenState extends State<SelectScreen> {
+  bool _revealImage =
+      false; // First, set to false to show 'tap to reveal' image
+  final Map<String, String> revealImageMap = {
+    // map to match each class with its corresponding 'tap to reveal' image
+    'cards': 'assets/cards/cardReveal.png',
+    'stoplights': 'assets/stoplight/stoplightReveal.png',
+    'tshirts': 'assets/tshirts/tshirtReveal.png'
+  };
+
   Widget build(BuildContext context) {
+    final revealImage = revealImageMap[widget
+        ._revealImageKey]; // sets the reveal image according to the revealImageMap
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(_title),
+        title: Text(widget._title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextButton(
-                onPressed: () {
-                  Navigator.pop(context, _asset);
-                },
-                child: Image.asset(_asset))
-          ],
-        ),
+        child: GestureDetector(
+            onTap: () {
+              setState(() {
+                _revealImage = !_revealImage; // Toggles the reveal
+              });
+            },
+            child: _revealImage
+                ? Image.asset(widget._asset) // Shows the original image
+                : Image.asset(revealImage!) // Shows the 'tap to reveal image'
+            ),
       ),
     );
   }

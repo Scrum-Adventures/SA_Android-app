@@ -74,12 +74,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "infinite_listview",
-      "rootUri": "file:///C:/Users/ruizg/AppData/Local/Pub/Cache/hosted/pub.dev/infinite_listview-1.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "js",
       "rootUri": "file:///C:/Users/ruizg/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
@@ -106,12 +100,6 @@
     {
       "name": "nested",
       "rootUri": "file:///C:/Users/ruizg/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "numberpicker",
-      "rootUri": "file:///C:/Users/ruizg/AppData/Local/Pub/Cache/hosted/pub.dev/numberpicker-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -183,7 +171,7 @@
     },
     {
       "name": "url_launcher_android",
-      "rootUri": "file:///C:/Users/ruizg/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_android-6.0.37",
+      "rootUri": "file:///C:/Users/ruizg/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_android-6.0.38",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -242,7 +230,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2023-08-04T16:46:15.400302Z",
+  "generated": "2023-08-18T02:04:02.655575Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }

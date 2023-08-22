@@ -31,15 +31,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c64d39d-4192-4298-b60c-81ce23f5436e" name="Default Changelist" comment="2020.12.09">
+      <change afterPath="$PROJECT_DIR$/assets/cards/cardReveal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/stoplight/stoplightReveal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/tshirts/tshirtReveal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/timebox/dailyscrum.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/timebox/dailyscrum.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/timebox/sprintduration.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/timebox/sprintduration.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/timebox/sprintplanning.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/timebox/sprintplanning.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/timebox/sprintretro.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/timebox/sprintretro.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/timebox/sprintreview.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/timebox/sprintreview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/timebox.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/timebox.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cards.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/cards.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screendisplay.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screendisplay.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stoplight.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stoplight.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tshirts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tshirts.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,10 +98,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ruizg\Desktop\SA_Android-app\assets\tshirts" />
+      <recent name="C:\Users\ruizg\Desktop\SA_Android-app\assets\stoplight" />
+      <recent name="C:\Users\ruizg\Desktop\SA_Android-app\assets\cards" />
       <recent name="C:\Users\ruizg\Desktop\SA_Android-app\assets\timebox" />
       <recent name="C:\Users\ruizg\Desktop\SA_Android-app\assets\fonts" />
-      <recent name="$PROJECT_DIR$/assets/timebox" />
-      <recent name="$PROJECT_DIR$/assets/home" />
     </key>
   </component>
   <component name="RunManager">

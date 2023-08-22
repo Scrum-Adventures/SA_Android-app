@@ -10,9 +10,9 @@ class Stoplights extends StatelessWidget {
       body: GridView.count(
         crossAxisCount: 2,
         children: <Widget>[
-          SelectAsset('assets/stoplight/1.png', 'STOP!'),
-          SelectAsset('assets/stoplight/2.png', 'SLOW DOWN!'),
-          SelectAsset('assets/stoplight/3.png', 'GOOOO!'),
+          SelectAsset('assets/stoplight/1.png', 'STOP!', 'stoplights'),
+          SelectAsset('assets/stoplight/2.png', 'SLOW DOWN!', 'stoplights'),
+          SelectAsset('assets/stoplight/3.png', 'GOOOO!', 'stoplights'),
         ],
       ),
     );
