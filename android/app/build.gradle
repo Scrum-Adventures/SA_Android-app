@@ -13,12 +13,12 @@ if (flutterRoot == null) {
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
 if (flutterVersionCode == null) {
-    flutterVersionCode = '3'
+    flutterVersionCode = '11'
 }
 
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
-    flutterVersionName = '3.0'
+    flutterVersionName = '11.0'
 }
 
 apply plugin: 'com.android.application'
@@ -52,14 +52,13 @@ android {
        release {
            keyAlias keystoreProperties['keyAlias']
            keyPassword keystoreProperties['keyPassword']
-           storeFile file(keystoreProperties['storeFile'])
+           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
            storePassword keystoreProperties['storePassword']
        }
    }
 
     buildTypes {
         release {
-
             signingConfig signingConfigs.release
         }
     }
