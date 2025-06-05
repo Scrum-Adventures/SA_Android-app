@@ -16,3 +16,10 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 # SA_ScopeInspector
 # Toolbox
+
+# Knowledge Transfer Notes
+
+## Deployment
+- Will need a Mac laptop to make iOS build and deploy to the Apple App Store
+- Android build and deployment can be done on Windows or Mac computer
+- Passwords to Google Developer Account and Apple Developer Account are in the Sharepoint
