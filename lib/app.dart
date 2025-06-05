@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         '/timebox.dart': (ctx) => Timebox(),
       },
     );
-    // Gustavo is in
+    // Gustavo is in; Gustavo is out
     // Eva is in
     // Tymee is in
   }
